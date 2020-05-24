@@ -1,0 +1,17 @@
+SELECT name
+FROM SHIPS
+WHERE class IN(
+SELECT class
+FROM classes
+WHERE DISPLACEMENT>50000)
+
+SELECT SHIPS.Name, classes.displacement,numguns
+FROM SHIPS
+INNER JOIN CLASSES ON classes.class=ships.class
+WHERE SHIPS.Name IN(
+SELECT ship
+FROM OUTCOMES
+WHERE BATTLE='Guadalcanal')
+
+SELECT class
+FROM SHIPS
