@@ -1,0 +1,200 @@
+3Customers(SSNo, name, addr, phone)
+Flights(number, day, aircraft)
+Bookings(row, seat, SSNo, number, day)
+
+Figure 3.12
+
+Ships(name, yearLaunched)
+Sisterof(shipName, sisterShip)
+
+Figure 3.14
+
+Depts(name, chair)
+
+1. E/R
+
+Courses(number, room, deptName)
+LabCourses(deptName, number, computerAllocation)
+
+2. OO
+
+Courses(number, room, deptName)
+CoursesLabCourses(number, room, deptName, domputerAllocation)
+
+3. NULL
+Courses(number, room, deptName, computerAllocation)
+
+Figure 3.15
+
+1. E/R
+Person(name, address)
+Child(name, address)
+Father(name, address)
+Mother(name, address)
+
+ChildOf(name, address, personName, personAddress)
+FatherOf(childname, childAddress, name, address)
+MotherOf(childname, childAddress, name, address)
+Married(fatherName, fatherAddress, motherName, motherAddress)
+
+2. OO
+Person(name, address)
+PersonChild(name, address)
+PersonChildFather(name, address)
+PersonChildMother(name, address)
+PersonFather(name, address)
+PersonFatherMother(name, address)
+PersonMother(name, address)
+PersonChildFatherMother(name, address)
+
+ChildOf(name, address, personName,personAddress)
+FatherOf(childname, childAddress, name, address)
+MotherOf(childname, childAddress, name, address)
+Married(fatherName, fatherAddress, motherName, motherAddress)
+
+3. NULL
+Person(name, address)
+
+ChildOf(name, address,personName,personAddress)
+FatherOf(childname, childAddress, name, address)
+MotherOf(childname, childAddress, name, address)
+Married(fatherName, fatherAddress, motherName, motherAddress)
+
+час 2
+
+R(A, B, C, D)
+AB -> C
+C->D
+D->A
+
+{A}+={A}
+X={A}
+
+{B}+={B}
+X={B}
+
+{C}+={A, C, D}
+X={C} & C->D
+X={C, D} & D->A
+X={A, C, D}
+C->A
+
+{D}+={A, D}
+X={D} & D->A
+X={A, D}
+
+{A, B}+={A, B, C, D}
+X={A, B} & AB->C
+X={A, B, C} & C->D
+X={A, B, C, D}
+AB->D
+
+{A, C}+={A, C, D}
+X={A, C} & C->D
+X={A, C, D}
+AC->D
+
+{A, D}+={A, D}
+X={A, D} 
+
+{B, C}+={A, B, C, D}
+X={B, C} & C->D
+X={B, C, D} & D->A
+X={A, B, C, D}
+BC->A
+BC->D
+
+{B, D}+={A, B, C, D}
+X={B, D} & D->A
+X={A, B, D} & AB->C
+X={A, B, C, D}
+BD->A
+BD->C
+
+{C, D}+={A, C, D}
+X={C, D} & D->A
+X={A, C, D}
+CD->A
+
+{A, B, C}+={A, B, C, D}
+ABC->D
+
+{A, B, D}+={A, B, C, D}
+ABD->C
+
+{A, C, D}+={A, C, D}
+X={A, C, D}
+
+{B, C, D}+={A, B, C, D}
+BCD->A
+
+{A, B, C, D}
+
+Exe. 3.5.2
+
+S(A, B, C, D)
+A->B
+B->C
+B->D
+
+{A}+={A, B, C, D}
+X={A} & A->B
+X={A, B} & B->C
+X={A, B, C} & B->D
+X={A, B, C, D}
+A->C
+A->D
+
+{B}+={B, C, D}
+X={B} & B->C
+X={B, C} & B->D
+X={B, C, D}
+
+{C}+={C}
+
+{D}+={D}
+
+{A, B}+={A, B, C, D}
+AB->C
+AB->D
+
+{A, C}+={A, B, C, D}
+AC->B
+AC->D
+
+{A, D}+={A, B, C, D}
+AD->B
+AD->C
+
+{B, C}+={B, C, D}
+X={B, C} & B->D
+X={B, C, D}
+BC->D
+
+{B, D}+={B, C, D}
+X={B, D} & B->C
+X={B, C, D}
+BD->C
+
+{C, D}+={C, D}
+
+{A, B, C}+={A, B, C, D}
+ABC->D
+
+{A, B, D}+={A, B, C, D}
+ABD->C
+
+{A, C, D}+={A, B, C, D}
+ACD->B
+
+{B, C, D}+={B, C, D}
+
+{A, B, C, D}
+
+
+
+
+
+
+
+
